@@ -3,7 +3,7 @@ export class autosearch extends Component {
     constructor(props){
         super(props);
         
-        this .state = {
+        this.state = {
             suggestions: [],
             text:'',
         }
@@ -16,7 +16,7 @@ onTextChanged = (e) => {
     if(value.length>0){
         const regex = new RegExp(`^${value}`,'i');
         suggestion = items.sort().filter(v => regex.test(v));
-        if(suggestion.length==0){
+        if(suggestion.length===0){
             suggestion=["Not Found!!"];
         }
         else{
